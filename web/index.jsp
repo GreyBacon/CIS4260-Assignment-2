@@ -33,10 +33,10 @@
                 </br>
                 <label>Credit Card: </label>
                 <div> 
-                    <input type="radio" name="credit_card" value ="visa" checked>Visa<br>
-                    <input type="radio" name="credit_card" value ="master">Master Card<br>
-                    <input type="radio" name="credit_card" value ="amex">American Express<br>
-                    <input type="radio" name="credit_card" value ="discover">Discover<br>
+                    <input type="radio" name="credit_card" value ="Visa" checked>Visa<br>
+                    <input type="radio" name="credit_card" value ="Master Card">Master Card<br>
+                    <input type="radio" name="credit_card" value ="American Express">American Express<br>
+                    <input type="radio" name="credit_card" value ="Discover">Discover<br>
                 </div>
                 <label>Credit Card Number: </label>
                 <input type="password" name="cc_no" required>

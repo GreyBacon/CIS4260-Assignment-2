@@ -52,10 +52,10 @@ public class Order implements java.io.Serializable {
     }  
 
     
-    public int getProductPriceNum() {
-        return productQuantityNum;
+    public double getProductPriceNum() {
+        return productPriceNum;
     }
-    public void setProductPriceNum(int productPriceNum) {
+    public void setProductPriceNum(double productPriceNum) {
         this.productPriceNum = productPriceNum;
     }  
     

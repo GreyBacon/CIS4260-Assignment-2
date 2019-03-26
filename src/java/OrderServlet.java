@@ -40,7 +40,7 @@ public class OrderServlet extends HttpServlet {
        String creditCard = request.getParameter("credit_card");
        String ccNo = request.getParameter("cc_no");
        
-       Order newOrder = new Order(productName,productQuantityNum, productPriceNum, userName, userAddr, creditCard, ccNo);//Create order object with information from form
+       Order newOrder = new Order(productName,productQuantityNum, productPriceNum, userName, userAddr, creditCard, ccNo); //Create order object with information from form
        
        //Figure out details on how this work better *********************************************
        request.setAttribute("Order", newOrder);
@@ -53,6 +53,7 @@ public class OrderServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             out.println("productName: " + productName);
             out.println("productQuantityNum: " + productQuantityNum +", test valid int " + ++productQuantityNum);
+            
             out.println("userName: " + userName);
             out.println("userAddr: " + userAddr);
             out.println("creditCard: " + creditCard);

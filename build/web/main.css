@@ -51,3 +51,30 @@ hr {
     margin-top: 20px;
     margin-bottom: 30px;
 }
+#displayForm {
+    background-color: lightsteelblue;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+}
+#displayForm>table,th,td {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+#displayForm>table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*tLabel and tVal formats the corresponding parts on the table in display.jsp*/
+.tLabel {                   
+    text-align: right;
+    padding-right: 10px;
+}
+.tVal {
+    text-align: left;
+    padding-left: 10px;
+}
