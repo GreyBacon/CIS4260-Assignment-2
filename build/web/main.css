@@ -1,0 +1,53 @@
+form {  /*css grid to separate labels and inputs*/
+    display:grid;
+    grid-template-columns: 300px 200px;
+    column-gap: 10px;
+}
+form>*{
+    margin-bottom: 3px; /* Just for generic spacing in form*/
+}
+label {
+    grid-column: 1;
+    text-align:right;
+     align-self: center;
+}
+form>input[type=text] {
+    grid-column: 2;
+}
+form>input[type=radio] {
+    grid-column: 2;
+    margin-left: 0;
+    text-align: left;
+}
+form>input[type=submit] {
+    grid-column: 2;
+    width: 50%;
+}
+form>textarea {
+    width: 300px;
+}
+form>select {
+    grid-column: 2;
+    width: 40px;
+}
+
+h2 {
+    margin-left: 300px;
+    margin-bottom: 40px;
+}
+#mainFormDiv {
+    background-color: lightsteelblue;
+    width: 800px;
+    margin-left: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+hr {
+    grid-column: 1 / 3;
+    color: black;
+    width: 100%;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
