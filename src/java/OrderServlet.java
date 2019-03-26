@@ -39,13 +39,17 @@ public class OrderServlet extends HttpServlet {
        String userAddr = request.getParameter("user_addr");
        String creditCard = request.getParameter("credit_card");
        String ccNo = request.getParameter("cc_no");
+       String ccNoRepeat = request.getParameter("cc_no_repeat");
        
        Order newOrder = new Order(productName,productQuantityNum, productPriceNum, userName, userAddr, creditCard, ccNo); //Create order object with information from form
        
+       //if(ccNo == ccNoRepeat) {
        //Figure out details on how this work better *********************************************
        request.setAttribute("Order", newOrder);
        RequestDispatcher dispatcher = request.getRequestDispatcher("display.jsp");
-       dispatcher.forward(request, response);
+       dispatcher.forward(request, response);          
+       //}
+
        
        //response.sendRedirect("display.jsp");
        
