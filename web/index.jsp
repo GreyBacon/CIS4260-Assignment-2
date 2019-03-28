@@ -13,20 +13,25 @@
         <title>Order Form</title>
     </head>
     <body>
-    <div id="mainFormDiv">
+    <div id="mainFormDiv" >
         <h2>Order Form</h2>
+        
+        <? if(${error_message}!=null{?>
+        <h2 id="errorMessage">${error_message}</h2>
+        <?}?>
+        
             <form action="OrderServlet" method="post" id="mainForm">
                 <label>Product: </label> 
-                <input type="text" name="product_name" required>
+                <input type="text" name="product_name" value="${product_name}" required>
                 </br>
                 <label>Quantity: </label>
                 <select name="product_quantity" id="selectQuantity"> </select> <!--Populated via script -->
                 </br>
                 <label>Unit Price: </label>
-                <input type="text" name="product_price" required>
+                <input type="text" name="product_price" value="${product_price}" required>
                 </br>
                 <label>Name: </label>
-                <input type="text" name="user_name" required>
+                <input type="text" name="user_name" value="${user_name}" required>
                 </br>
                 <label>Shipping Address: </label>
                 <textarea name="user_addr" rows="4"></textarea>
@@ -59,6 +64,7 @@
             for(i=1; i<maxQuantity+1; i++){
             $("#selectQuantity").append($('<option></option>').val(i).html(i));     //Fills out the product quantity dropdown
             }
+
         })
     </script>
 </html>

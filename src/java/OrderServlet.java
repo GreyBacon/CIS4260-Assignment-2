@@ -45,13 +45,23 @@ public class OrderServlet extends HttpServlet {
        
        Order newOrder = new Order(productName,productQuantityNum, productPriceNum, userName, userAddr, creditCard, ccNo); //Create order object with information from form
        
+       if (ccNo.equals(ccNoRepeat)){ //only if credit card numbers match
+            //Figure out details on how this work better *********************************************
+            request.setAttribute("Order", newOrder);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("display.jsp");
+            dispatcher.forward(request, response);  
+       } else { //return to form if cc numbers don't match
+           //Returns product, price, name
+            request.setAttribute("product_name", request.getParameter("product_name"));
+            request.setAttribute("product_price", request.getParameter("product_price"));
+            request.setAttribute("user_name", request.getParameter("user_name"));
+            request.setAttribute("error_message", "Credit card numbers do not match.");
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+            dispatcher.forward(request, response);
+       }
+        
        
-       //if(ccNo == ccNoRepeat) {
-       //Figure out details on how this work better *********************************************
-       request.setAttribute("Order", newOrder);
-       RequestDispatcher dispatcher = request.getRequestDispatcher("display.jsp");
-       dispatcher.forward(request, response);          
-       //}
 
        
        //response.sendRedirect("display.jsp");

@@ -78,3 +78,7 @@ hr {
     text-align: left;
     padding-left: 10px;
 }
+
+#errorMessage {
+    color:red;
+}
