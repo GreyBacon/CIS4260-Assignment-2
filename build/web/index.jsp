@@ -49,11 +49,10 @@
                 <label>Repeat Credit Card Number: </label>
                 <input type="password" name="cc_no_repeat" required >
                 </br>
-                
-                <hr>
-                <input type="submit" value="Submit Order" id="btnSubmit" >
 
             </form>
+            <hr>
+            <input type="submit" value="Submit Order" id="btnSubmit" form="mainForm">
     </div>
     </body>
     
