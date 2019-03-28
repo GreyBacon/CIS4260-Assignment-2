@@ -41,7 +41,10 @@ public class OrderServlet extends HttpServlet {
        String ccNo = request.getParameter("cc_no");
        String ccNoRepeat = request.getParameter("cc_no_repeat");
        
+
+       
        Order newOrder = new Order(productName,productQuantityNum, productPriceNum, userName, userAddr, creditCard, ccNo); //Create order object with information from form
+       
        
        //if(ccNo == ccNoRepeat) {
        //Figure out details on how this work better *********************************************

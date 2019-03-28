@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <th class="tLabel">Order Total</th>
-                    <th class="tVal">${Order.productQuantityNum * Order.productPriceNum}</th>
+                    <th class="tVal">${Order.totalPrice}</th>
                 </tr>
                 <tr>
                     <th class="tLabel">Shipping Address</th>

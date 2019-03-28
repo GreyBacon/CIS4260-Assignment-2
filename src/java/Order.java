@@ -1,3 +1,6 @@
+
+import java.text.NumberFormat;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,6 +10,7 @@
 /**
  *
  * @author Ken Wood
+ * Javabean
  */
 public class Order implements java.io.Serializable {
     private String productName;
@@ -16,6 +20,7 @@ public class Order implements java.io.Serializable {
     private String userAddr;
     private String creditCard;
     private String ccNo;
+    private String totalPrice;
     
     public Order() {
         productName = "";
@@ -24,7 +29,8 @@ public class Order implements java.io.Serializable {
         userName = "";
         userAddr = "";
         creditCard = "";
-        ccNo = "";        
+        ccNo = "";    
+        totalPrice = "";
     }
     public Order(String productName, int productQuantityNum, double productPriceNum, String userName, String userAddr, String creditCard, String ccNo) {
         this.productName = productName;
@@ -34,6 +40,8 @@ public class Order implements java.io.Serializable {
         this.userAddr = userAddr;
         this.creditCard = creditCard;
         this.ccNo = ccNo;
+        totalPrice = getTotalPrice();
+        
     }
 
     public String getProductName() {
@@ -58,6 +66,12 @@ public class Order implements java.io.Serializable {
     public void setProductPriceNum(double productPriceNum) {
         this.productPriceNum = productPriceNum;
     }  
+    
+    
+    public String getTotalPrice() {
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        return currency.format(productQuantityNum*productPriceNum);
+    }
     
     
     public String getUserName() {
